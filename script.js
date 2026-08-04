@@ -6,7 +6,9 @@ const TOTAL_IMAGENES = 90;
 
 for (let i = 1; i <= TOTAL_IMAGENES; i++) {
     let foto = document.createElement("img");
-    foto.src = ${CARPETA}/jpeg${i}.${EXTENSION};
+
+    // Tus imágenes se llaman: jpeg (1).jpeg, jpeg (2).jpeg, etc.
+    foto.src = ${CARPETA}/jpeg (${i}).${EXTENSION};
     foto.alt = Foto ${i};
 
     foto.onerror = function () {
@@ -19,6 +21,7 @@ for (let i = 1; i <= TOTAL_IMAGENES; i++) {
 
 window.addEventListener("load", () => {
     const musica = document.getElementById("musica");
+
     if (musica) {
         musica.play().catch(() => {
             document.addEventListener("click", () => {

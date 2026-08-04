@@ -1,4 +1,23 @@
-<!DOCTYPE html>
+[5:13 p. m., 3/8/2026] Jonnatan Paez: let galeria = document.getElementById("galeria");
+const CARPETA = "imagenes";
+const EXTENSION = "jpeg"; // cambia a "jpg" si tus archivos son .jpg
+const TOTAL_IMAGENES = 90;
+
+for (let i = 1; i <= TOTAL_IMAGENES; i++) {
+    let foto = document.createElement("img");
+
+    // Sin espacio antes del paréntesis, que suele ser la causa real del fallo
+    foto.src = ${CARPETA}/jpeg${i}.${EXTENSION};
+
+    foto.onerror = function () {
+        console.log("No se encontró:", this.src);
+        this.remove(); // opcional: quita del DOM la imagen rota
+    };
+
+    foto.alt = Foto ${i};
+    galeria.appendChild(foto);
+}
+[5:14 p. m., 3/8/2026] Jonnatan Paez: <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -11,9 +30,12 @@
 <h1>❤️ Nuestra Historia de Amor ❤️</h1>
 
 <p>
-Cada una de las fotos es uno de los momentos que jamás olvidaré.
-Siempre vas a estar en mi mente y en mi corazón.
-Gracias por todo lo que compartiste conmigo.
+        cada una de las fotos es uno de los moemntos que jamas olvidare siempe.
+        vas a estar en mi mente y en mi corazon gracias por todo lo que compartio.
+        conmigo gracias por aveme enseñado el valor del amor gracias por todo.
+        pero recuerda que siempres vas a estar presente en mi mente y mi corazon 
+        por qur usted fue y sera el amor de mi vida el amor que siempre soñe.
+        mucgas y espero que seas feliz sin mi. att su negro.
 </p>
 
 <audio id="musica" controls autoplay loop>

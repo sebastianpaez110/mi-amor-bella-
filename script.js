@@ -1,4 +1,11 @@
-function mensaje() {
-    document.getElementById("texto").innerHTML =
-    "💖 Eres el amor de mi vida. Gracias por existir. Te amo infinitamente. 💖";
+let galeria=document.getElementById("galeria");
+
+for(let i=1;i<=90;i++){
+
+let foto=document.createElement("img");
+
+foto.src="imagenes/foto"+i+".jpg";
+
+galeria.appendChild(foto);
+
 }
